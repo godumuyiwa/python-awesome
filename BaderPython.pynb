@@ -1,0 +1,96 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled7.ipynb",
+      "version": "0.3.2",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/godumuyiwa/python-awesome/blob/master/BaderPython.pynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "metadata": {
+        "id": "2vD6HDLPy2_s",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "cell_type": "code",
+      "source": [
+        "def get_permutations(string):\n",
+        "    \n",
+        "    if len(string) <= 1:\n",
+        "        return set(string)\n",
+        "        \n",
+        "    all_chars_except_last = string[:-1]\n",
+        "    last_char = string[-1]\n",
+        "\n",
+        "    # Generate all permutations of the input string\n",
+        "    \n",
+        "    permutations_of_all_chars_except_last = get_permutations(all_chars_except_last)\n",
+        "    \n",
+        "    return permutations_of_all_chars_except_last"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "metadata": {
+        "id": "xXrNbc1ay_hi",
+        "colab_type": "code",
+        "outputId": "bbf34392-8218-4e4e-c93c-34f524b6a698",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        }
+      },
+      "cell_type": "code",
+      "source": [
+        "get_permutations(\"cat\")"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'c'}"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 5
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "id": "FL_trnKGzFmu",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "cell_type": "code",
+      "source": [
+        ""
+      ],
+      "execution_count": 0,
+      "outputs": []
+    }
+  ]
+}
